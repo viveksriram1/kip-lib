@@ -1,0 +1,16 @@
+<div class="col-lg-4 col-sm-6 text-center" {{action "over" on="mouseEnter"}}>
+  <div {{action "out" on="mouseLeave"}}>
+    {{#if overDiv}}
+      You are over div now!!!
+    {{/if}}
+    <img class="img-circle img-responsive img-center" src={{image}} alt="">
+    <h3>{{name}}
+        <small>{{title}}</small>
+    </h3>
+    <a href={{twitter}}>Twitter</a>
+    {{yield}}
+  </div>
+</div>
+<script>  
+window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));  
+</script> 
